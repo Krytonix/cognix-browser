@@ -1,153 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cognix Browser – Official Download</title>
-  <meta name="description" content="Download Cognix Browser – a fast, clean and privacy-focused desktop browser built with Electron." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cognix Browser - The fast, private, and secure web browser for Windows. No telemetry, low RAM usage, and a premium dark UI. Download now.">
+    <meta name="keywords"
+        content="web browser, fast browser, privacy browser, dark mode browser, low ram browser, cognix">
+    <meta name="author" content="Cognix Team">
+    <meta property="og:title" content="Cognix Browser - Pure Performance & Privacy">
+    <meta property="og:description"
+        content="Experience the web without limits. Zero tracking. Maximum speed. Download Cognix for Windows.">
+    <meta property="og:type" content="website">
+    <title>Cognix Browser | Fast, Private, Secure</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-    }
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    body {
-      margin: 0;
-      background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
-      color: #ffffff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 
-    .container {
-      max-width: 900px;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-    }
-
-    .left h1 {
-      font-size: 42px;
-      margin: 0 0 15px;
-      letter-spacing: 1px;
-    }
-
-    .left p {
-      color: #cfcfcf;
-      font-size: 17px;
-      line-height: 1.7;
-    }
-
-    .features {
-      margin-top: 20px;
-    }
-
-    .features li {
-      margin-bottom: 10px;
-      color: #bdbdbd;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 35px;
-      border-radius: 18px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 16px 34px;
-      background: linear-gradient(135deg, #6a5cff, #4a3cff);
-      color: #fff;
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: bold;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(106,92,255,0.45);
-    }
-
-    .version {
-      margin-top: 12px;
-      font-size: 13px;
-      color: #9a9a9a;
-    }
-
-    .note {
-      margin-top: 18px;
-      font-size: 13px;
-      color: #8c8c8c;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 12px;
-      color: #666;
-      text-align: center;
-    }
-  </style>
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 </head>
+
 <body>
 
-  <div class="container">
+    <!-- Background Elements -->
+    <div class="glow-bg top-left"></div>
+    <div class="glow-bg bottom-right"></div>
 
-    <div class="left">
-      <h1>Cognix Browser</h1>
-      <p>
-        A fast, clean and intelligent desktop browser built with Electron.
-        Designed for speed, simplicity and privacy — without distractions.
-      </p>
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="container nav-content">
+            <a href="#" class="logo">Cognix<span class="dot">.</span></a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#privacy">Privacy</a>
+                <a href="#download" class="nav-cta">Download</a>
+            </div>
+        </div>
+    </nav>
 
-      <ul class="features">
-        <li> Fast & lightweight</li>
-        <li> Privacy-focused browsing</li>
-        <li> Clean & modern UI</li>
-        <li> No telemetry, no tracking</li>
-      </ul>
-    </div>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text fade-in-up">
+                <div class="badge">Version 2.0.0 Now Available</div>
+                <h1>Browse Without <br><span class="gradient-text">Limits.</span></h1>
+                <p class="hero-sub">
+                    Engineer-grade performance met with elegant design. Cognix is built for speed, respects your
+                    privacy, and leaves zero footprint.
+                </p>
 
-    <div class="card">
-      <h2>Download</h2>
+                <div class="download-area">
+                    <a href="https://github.com/Krytonix/cognix-browser/releases/tag/v2.0.0" class="btn-primary" id="download-btn">
+                        <svg class="icon-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download for Windows
+                    </a>
+                    <div class="meta-info">
+                        <span>v2.0.0 (64-bit)</span> • <span>65 MB</span> • <span>Windows 10/11</span>
+                    </div>
+                </div>
 
-      <a class="btn" href="https://github.com/Krytonix/cognix-browser/releases/tag/v1.0.0" download>
-        Download for Windows
-      </a>
+                <!-- SmartScreen Note -->
+                <div class="windows-note fade-in-up delay-1">
+                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <p><strong>Windows User?</strong> This app is unsigned. If SmartScreen appears, click <em>"More
+                            Info"</em> &rarr; <em>"Run Anyway"</em>.</p>
+                </div>
+            </div>
 
-      <div class="version">Version 1.0.0 • Windows 64‑bit</div>
+            <!-- Hero Visual / Mockup Representation -->
+            <div class="hero-visual fade-in-up delay-2">
+                <div class="browser-mockup glass">
+                    <div class="browser-header">
+                        <div class="dots">
+                            <span class="dot-red"></span>
+                            <span class="dot-yellow"></span>
+                            <span class="dot-green"></span>
+                        </div>
+                        <div class="address-bar">cognix://newtab</div>
+                    </div>
+                    <div class="browser-body">
+                        <div class="browser-content-placeholder">
+                            <div class="circle-big"></div>
+                            <div class="lines">
+                                <span class="line full"></span>
+                                <span class="line short"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-      <div class="note">
-        Windows SmartScreen may show a warning.<br />
-        Click <b>More info → Run anyway</b>.
-      </div>
-    </div>
+    <!-- Features Section -->
+    <section id="features" class="features section">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Engineered for Perfection</h2>
+                <p>Everything you need in a modern browser, with none of the bloat.</p>
+            </div>
 
-  </div>
+            <div class="feature-grid">
+                <!-- Feature 1: Speed -->
+                <div class="feature-card glass hover-lift">
+                    <div class="icon-box gradient-1">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Blazing Fast</h3>
+                    <p>Optimized rendering engine ensures pages load instantly. Say goodbye to lag and heavy resource
+                        consumption.</p>
+                </div>
 
-  <footer>
-    © 2026 Cognix Browser. All rights reserved.
-  </footer>
+                <!-- Feature 2: Privacy -->
+                <div class="feature-card glass hover-lift">
+                    <div class="icon-box gradient-2">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Zero Telemetry</h3>
+                    <p>We don't track you. No data collection, no hidden analytics. Your browsing history stays on your
+                        device.</p>
+                </div>
 
+                <!-- Feature 3: Low RAM -->
+                <div class="feature-card glass hover-lift">
+                    <div class="icon-box gradient-3">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3>Efficient Memory</h3>
+                    <p>Cognix uses up to 50% less RAM than competitors, keeping your system fast even with dozens of
+                        tabs open.</p>
+                </div>
+
+                <!-- Feature 4: UI -->
+                <div class="feature-card glass hover-lift">
+                    <div class="icon-box gradient-4">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h3>Clean Aesthetics</h3>
+                    <p>A distraction-free interface designed for focus. Modern glassmorphism meets intuitive usability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust / Local First Section -->
+    <section id="privacy" class="trust section">
+        <div class="container trust-container glass">
+            <div class="trust-content">
+                <h2>Your Data is Yours. Period.</h2>
+                <div class="trust-points">
+                    <div class="point">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>No Cloud Sync - Local Storage Only</span>
+                    </div>
+                    <div class="point">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Open Source Core Technologies</span>
+                    </div>
+                    <div class="point">
+                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="3">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span>Built-in Ad & Tracker Blocker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="logo">Cognix<span class="dot">.</span></span>
+                <p>&copy; 2026 Cognix Browser. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Support</a>
+                <a href="#">Github</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
-</html>
 
+</html>
