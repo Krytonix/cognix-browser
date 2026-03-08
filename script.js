@@ -1,63 +1,113 @@
+// Wait for DOM to load
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px"
+
+    // 1. Scroll Reveal Animation
+    const reveals = document.querySelectorAll('.reveal');
+
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const revealOnScroll = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('active');
+
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, revealOptions);
 
-    // Observe all feature cards and sections
-    document.querySelectorAll('.feature-card, .trust-container').forEach((el, index) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-        el.style.transitionDelay = `${index * 100}ms`; // Stagger effect
-        observer.observe(el);
+    reveals.forEach(reveal => {
+        revealOnScroll.observe(reveal);
     });
 
-    // Add visible class styling dynamically
-    const style = document.createElement('style');
-    style.innerHTML = `
-        .visible {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-    `;
-    document.head.appendChild(style);
+    // 3. FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
 
-    // Smooth Scroll for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all others
+            faqItems.forEach(faq => {
+                faq.classList.remove('active');
+            });
+
+            // Toggle current
+            if (!isActive) {
+                item.classList.add('active');
             }
         });
     });
 
-    // Navbar Glass Effect on Scroll
+    // 5. Navbar Scrolled State
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(5, 5, 7, 0.8)';
-            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
+            navbar.style.background = 'rgba(5, 5, 10, 0.95)';
+            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
         } else {
-            navbar.style.background = 'transparent';
+            navbar.style.background = 'rgba(5, 5, 10, 0.8)';
             navbar.style.boxShadow = 'none';
         }
     });
 
-    console.log('Cognix Browser Landing Page Loaded');
+    // Smooth Scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+
+    // Handle Version Selection and Download Links
+    const downloadLinks = {
+        '3.0.1': 'https://github.com/Krytonix/cognix-browser/releases/tag/v3.0.1', // Default Link
+        '2.0.0': 'https://github.com/Krytonix/cognix-browser/releases/tag/v2.0.0', // CHANGE THIS TO YOUR 2.0.0 LINK
+        '1.0.0': 'https://github.com/Krytonix/cognix-browser/releases/tag/v1.0.0'  // CHANGE THIS TO YOUR 1.0.0 LINK
+    };
+
+    const versionSelects = document.querySelectorAll('.version-select');
+    const downloadButtons = document.querySelectorAll('a.btn-primary.btn-massive');
+
+    versionSelects.forEach(select => {
+        select.addEventListener('change', (e) => {
+            const selectedVersion = e.target.value;
+            const link = downloadLinks[selectedVersion];
+
+            // Sync all selects if user changes one
+            versionSelects.forEach(s => s.value = selectedVersion);
+
+            // Update main download buttons
+            downloadButtons.forEach(btn => {
+                if (link) {
+                    btn.href = link;
+                }
+            });
+        });
+    });
+
+    // Set initial link based on default selection
+    if (versionSelects.length > 0 && downloadButtons.length > 0) {
+        const initialVersion = versionSelects[0].value;
+        const initialLink = downloadLinks[initialVersion];
+        if (initialLink) {
+            downloadButtons.forEach(btn => btn.href = initialLink);
+        }
+    }
+
 });
