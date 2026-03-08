@@ -4,201 +4,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognix Browser - Fast, Private, Minimal</title>
     <meta name="description"
-        content="Cognix Browser - The fast, private, and secure web browser for Windows. No telemetry, low RAM usage, and a premium dark UI. Download now.">
-    <meta name="keywords"
-        content="web browser, fast browser, privacy browser, dark mode browser, low ram browser, cognix">
-    <meta name="author" content="Cognix Team">
-    <meta property="og:title" content="Cognix Browser - Pure Performance & Privacy">
-    <meta property="og:description"
-        content="Experience the web without limits. Zero tracking. Maximum speed. Download Cognix for Windows.">
-    <meta property="og:type" content="website">
-    <title>Cognix Browser | Fast, Private, Secure</title>
-
-    <!-- Fonts -->
+        content="Experience the internet at the speed of light. Cognix Browser is ultra-lightweight, blocks ads, and protects your privacy.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Favicon -->
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 </head>
 
 <body>
-
-    <!-- Background Elements -->
-    <div class="glow-bg top-left"></div>
-    <div class="glow-bg bottom-right"></div>
-
-    <!-- Navigation -->
-    <nav class="navbar glass">
-        <div class="container nav-content">
-            <a href="#" class="logo">Cognix<span class="dot">.</span></a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">
+                <!-- PASTE YOUR LOGO FILE NAMED "logo.png" IN THE SAME FOLDER AS THIS INDEX.HTML FILE -->
+                <img src="logo.png" alt="Cognix Logo" width="32" height="32" style="border-radius: 8px;">
+                <span>Cognix</span>
+            </a>
             <div class="nav-links">
                 <a href="#features">Features</a>
-                <a href="#privacy">Privacy</a>
-                <a href="#download" class="nav-cta">Download</a>
+                <a href="#performance">Performance</a>
+                <a href="#faq">FAQ</a>
             </div>
+            <a href="https://github.com/Krytonix/cognix-browser/releases/tag/v3.0.1" class="btn btn-outline nav-cta">Download</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="container hero-content">
-            <div class="hero-text fade-in-up">
-                <div class="badge">Version 2.0.0 Now Available</div>
-                <h1>Browse Without <br><span class="gradient-text">Limits.</span></h1>
-                <p class="hero-sub">
-                    Engineer-grade performance met with elegant design. Cognix is built for speed, respects your
-                    privacy, and leaves zero footprint.
-                </p>
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+        <div class="hero-content fade-in-up">
+            <h1 class="hero-title">The Internet,<br> <span class="text-gradient">Without the Weight.</span></h1>
+            <p class="hero-subtitle">Experience browsing as it should be. Cognix combines lightning-fast speeds,
+                absolute privacy, and a built-in ad blocker in one beautifully minimal package.</p>
 
-                <div class="download-area">
-                    <a href="sha256:4c5f2eaff3db9d355a3eb43a10220fe7a9daff6a399d602b30ce8d8f1de54297" class="btn-primary"
-                        id="download-btn">
-                        <svg class="icon-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Download for Windows
-                    </a>
-                    <div class="meta-info">
-                        <span>v2.0.0 (64-bit)</span> • <span>77 MB</span> • <span>Windows 10/11</span>
-                    </div>
-                </div>
-
-                <!-- SmartScreen Note -->
-                <div class="windows-note fade-in-up delay-1">
-                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" y1="16" x2="12" y2="12"></line>
-                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            <div class="hero-cta-group">
+                <!-- IF YOU WANT THIS BUTTON TO DOWNLOAD IMMEDIATELY INSTEAD OF SCROLLING, PASTE THE LINK HERE -->
+                <a href="https://github.com/Krytonix/cognix-browser/releases/tag/v3.0.1" class="btn btn-primary btn-large">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="icon"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15M7 10L12 15M12 15L17 10M12 15V3"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                    <p><strong>Windows User?</strong> This app is unsigned. If SmartScreen appears, click <em>"More
-                            Info"</em> &rarr; <em>"Run Anyway"</em>.</p>
-                </div>
+                    Download Cognix
+                </a>
+                <a href="https://github.com/Krytonix/cognix-browser/releases/tag/v3.0.1" class="btn btn-secondary btn-large">See Why Users Switch</a>
             </div>
 
-            <!-- Hero Visual / Mockup Representation -->
-            <div class="hero-visual fade-in-up delay-2">
-                <div class="browser-mockup glass">
-                    <div class="browser-header">
-                        <div class="dots">
-                            <span class="dot-red"></span>
-                            <span class="dot-yellow"></span>
-                            <span class="dot-green"></span>
-                        </div>
-                        <div class="address-bar">cognix://newtab</div>
+            <div class="trust-signals">
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg> Fast</span>
+                <span class="dot">•</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg> Private</span>
+                <span class="dot">•</span>
+                <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg> Lightweight</span>
+            </div>
+
+            <div class="conversion-mini-bar">
+                <div class="os-icons">
+                    <svg title="Windows" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M2 3.8v7.4h9.3V2.4L2 3.8zM12.4 2.2v9h9.8V.8l-9.8 1.4zM2 12.3v7.4l9.3 1.4v-8.8H2zM12.4 12.3v9.2l9.8 1.6v-10.8h-9.8z" />
+                    </svg>
+                </div>
+                <div class="dl-info">
+                    <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 4px;">
+                        <select class="version-select">
+                            <option value="3.0.1">Version 3.0.1 (Latest)</option>
+                            <option value="2.0.0">Version 2.0.0</option>
+                            <option value="1.0.0">Version 1.0.0</option>
+                        </select>
+                        <span style="color: var(--text-muted);">•</span> <span>67 MB Installer</span>
                     </div>
-                    <div class="browser-body">
-                        <div class="browser-content-placeholder">
-                            <div class="circle-big"></div>
-                            <div class="lines">
-                                <span class="line full"></span>
-                                <span class="line short"></span>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="dl-status">Download starts in seconds ⚡</div>
                 </div>
             </div>
         </div>
+
+        <!-- Browser Mockup -->
+        <div class="browser-mockup-container zoom-in">
+            <div class="browser-window">
+                <div class="browser-header">
+                    <div class="browser-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="browser-tabs">
+                        <div class="tab active"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            </svg> Home</div>
+                        <div class="tab">Design Inspiration</div>
+                        <div class="tab">Cognix Setup</div>
+                    </div>
+                </div>
+                <div class="browser-toolbar">
+                    <div class="nav-btns">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 2v6h-6M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6M21 12a9 9 0 0 1-15 6.7L3 16" />
+                        </svg>
+                    </div>
+                    <div class="address-bar">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                        cognix.app
+                    </div>
+                    <div class="extensions">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                        <div class="adblock-badge">312 Blocked</div>
+                    </div>
+                </div>
+                <div class="browser-content">
+                    <div class="mock-content">
+                        <div class="mock-card mock-hero"></div>
+                        <div class="mock-grid">
+                            <div class="mock-card"></div>
+                            <div class="mock-card"></div>
+                            <div class="mock-card"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="glow-effect"></div>
+        </div>
     </header>
 
-    <!-- Features Section -->
-    <section id="features" class="features section">
-        <div class="container">
-            <div class="section-header center">
-                <h2>Engineered for Perfection</h2>
-                <p>Everything you need in a modern browser, with none of the bloat.</p>
+    <!-- Problem -> Solution Section -->
+    <section id="problem" class="section problem-section">
+        <div class="container section-header text-center reveal">
+            <h2>The Internet has become <span class="text-error">unbearable.</span></h2>
+            <p>Modern browsers are bloated with tracking, unnecessary features, and consume all your systemic resources.
+            </p>
+        </div>
+        <div class="container vs-container reveal">
+            <div class="vs-card problem-card">
+                <h3>Other Browsers</h3>
+                <ul class="bad-list">
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444">
+                            <path d="M18 6L6 18M6 6l12 12" />
+                        </svg> Eat up all your RAM</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444">
+                            <path d="M18 6L6 18M6 6l12 12" />
+                        </svg> Slow down your PC</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444">
+                            <path d="M18 6L6 18M6 6l12 12" />
+                        </svg> Let trackers follow you</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444">
+                            <path d="M18 6L6 18M6 6l12 12" />
+                        </svg> Bombard you with ads</li>
+                </ul>
             </div>
+            <div class="vs-divider">
+                <span>VS</span>
+            </div>
+            <div class="vs-card solution-card">
+                <h3>Cognix Browser</h3>
+                <ul class="good-list">
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg> Extremely lightweight</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg> Lightning-fast loads</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg> Absolute privacy focus</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg> Native Ad-blocker</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-            <div class="feature-grid">
-                <!-- Feature 1: Speed -->
-                <div class="feature-card glass hover-lift">
-                    <div class="icon-box gradient-1">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                        </svg>
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container section-header text-center reveal">
+            <h2>Engineered for <span class="text-gradient">Performance</span></h2>
+            <p>We rebuilt the browsing experience from the ground up.</p>
+        </div>
+
+        <div class="container features-grid">
+            <div class="feature-card reveal">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        <path d="M12 8v4" />
+                        <path d="M12 16h.01" />
+                    </svg>
+                </div>
+                <h3>Powerful Ad Blocker</h3>
+                <p>Say goodbye to annoying pop-ups, video ads, and malicious scripts natively.</p>
+            </div>
+            <div class="feature-card reveal" style="transition-delay: 100ms">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                </div>
+                <h3>Ultra-Lightweight</h3>
+                <p>Uses 70% less RAM than Chrome. Keep your PC running smoothly with dozens of tabs open.</p>
+            </div>
+            <div class="feature-card reveal" style="transition-delay: 200ms">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
+                        <line x1="1" y1="1" x2="23" y2="23" />
+                    </svg>
+                </div>
+                <h3>Privacy Protection</h3>
+                <p>Blocks third-party trackers, prevents fingerprinting, and never sells your data.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 3h18v18H3zM3 9h18M9 21V9" />
+                    </svg>
+                </div>
+                <h3>Clean Minimal UI</h3>
+                <p>A completely distraction-free interface that puts your content front and center.</p>
+            </div>
+            <div class="feature-card reveal" style="transition-delay: 100ms">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                    </svg>
+                </div>
+                <h3>Faster Page Loads</h3>
+                <p>By preventing ad scripts from loading, web pages render up to 3x faster.</p>
+            </div>
+            <div class="feature-card reveal" style="transition-delay: 200ms">
+                <div class="icon-wrapper">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                </div>
+                <h3>Seamless Sync</h3>
+                <p>Securely sync your bookmarks, passwords, and history across all your devices via end-to-end
+                    encryption.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="section performance-section">
+        <div class="container reveal">
+            <div class="performance-grid">
+                <div class="performance-content">
+                    <h2>Leave the Bloat Behind.</h2>
+                    <p>Stop settling for a browser that treats your system memory like an all-you-can-eat buffet. Cognix
+                        uses highly optimized resource allocation to stay lean.</p>
+
+                    <div class="stats-box">
+                        <div class="stat-item">
+                            <span class="stat-value">3x</span>
+                            <span class="stat-label">Faster Load Times</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">67<small>MB</small></span>
+                            <span class="stat-label">Download Size</span>
+                        </div>
                     </div>
-                    <h3>Blazing Fast</h3>
-                    <p>Optimized rendering engine ensures pages load instantly. Say goodbye to lag and heavy resource
-                        consumption.</p>
                 </div>
 
-                <!-- Feature 2: Privacy -->
-                <div class="feature-card glass hover-lift">
-                    <div class="icon-box gradient-2">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
+                <div class="performance-chart">
+                    <h3>RAM Usage (10 Tabs Open)</h3>
+                    <div class="bar-chart">
+                        <div class="bar-row">
+                            <span class="bar-label">Chrome</span>
+                            <div class="bar-track">
+                                <div class="bar-fill bad" style="width: 95%;"></div>
+                            </div>
+                            <span class="bar-value">1.8 GB</span>
+                        </div>
+                        <div class="bar-row">
+                            <span class="bar-label">Edge</span>
+                            <div class="bar-track">
+                                <div class="bar-fill warning" style="width: 80%;"></div>
+                            </div>
+                            <span class="bar-value">1.5 GB</span>
+                        </div>
+                        <div class="bar-row">
+                            <span class="bar-label">Firefox</span>
+                            <div class="bar-track">
+                                <div class="bar-fill warning" style="width: 70%;"></div>
+                            </div>
+                            <span class="bar-value">1.2 GB</span>
+                        </div>
+                        <div class="bar-row highlight-row">
+                            <span class="bar-label text-gradient">Cognix</span>
+                            <div class="bar-track">
+                                <div class="bar-fill good pulse-bar" style="width: 20%;"></div>
+                            </div>
+                            <span class="bar-value text-primary">350 MB</span>
+                        </div>
                     </div>
-                    <h3>Zero Telemetry</h3>
-                    <p>We don't track you. No data collection, no hidden analytics. Your browsing history stays on your
-                        device.</p>
-                </div>
-
-                <!-- Feature 3: Low RAM -->
-                <div class="feature-card glass hover-lift">
-                    <div class="icon-box gradient-3">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                        </svg>
-                    </div>
-                    <h3>Efficient Memory</h3>
-                    <p>Cognix uses up to 50% less RAM than competitors, keeping your system fast even with dozens of
-                        tabs open.</p>
-                </div>
-
-                <!-- Feature 4: UI -->
-                <div class="feature-card glass hover-lift">
-                    <div class="icon-box gradient-4">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="3" y1="9" x2="21" y2="9"></line>
-                            <line x1="9" y1="21" x2="9" y2="9"></line>
-                        </svg>
-                    </div>
-                    <h3>Clean Aesthetics</h3>
-                    <p>A distraction-free interface designed for focus. Modern glassmorphism meets intuitive usability.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust / Local First Section -->
-    <section id="privacy" class="trust section">
-        <div class="container trust-container glass">
-            <div class="trust-content">
-                <h2>Your Data is Yours. Period.</h2>
-                <div class="trust-points">
-                    <div class="point">
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="3">
-                            <polyline points="20 6 9 17 4 12"></polyline>
+
+    <!-- Download Section -->
+    <section id="download" class="section download-section">
+        <div class="container text-center reveal">
+            <h2>Ready to surf faster?</h2>
+            <p class="download-subtitle">Download the installer. Setup takes literally 5 seconds.</p>
+
+            <div class="download-card">
+                <div class="download-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.5">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                    </svg>
+                </div>
+                <!-- PASTE YOUR EXE / MSI INSTALLER DOWNLOAD LINK IN THE HREF ATTRIBUTE BELOW -->
+                <a href="#" class="btn btn-primary btn-massive">Download For Windows</a>
+
+                <div class="download-meta">
+                    <span class="safe-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg> Safe & Verified</span>
+                    <select class="version-select version-select-large">
+                        <option value="3.0.1">Version 3.0.1 (Latest)</option>
+                        <option value="2.0.0">Version 2.0.0</option>
+                        <option value="1.0.0">Version 1.0.0</option>
+                    </select>
+                    <span>Size: 67 MB</span>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+        <div class="container reveal">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is Cognix browser safe to use?</h3>
+                        <svg class="toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor">
+                            <path d="M6 9l6 6 6-6" />
                         </svg>
-                        <span>No Cloud Sync - Local Storage Only</span>
                     </div>
-                    <div class="point">
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="3">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                        <span>Open Source Core Technologies</span>
+                    <div class="faq-answer">
+                        <p>Absolutely. Cognix is built on the secure Chromium core, but stripped of all trackers and
+                            telemetry. We undergo regular independent security audits to ensure your browsing identity
+                            is always protected.</p>
                     </div>
-                    <div class="point">
-                        <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="3">
-                            <polyline points="20 6 9 17 4 12"></polyline>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is it entirely free?</h3>
+                        <svg class="toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor">
+                            <path d="M6 9l6 6 6-6" />
                         </svg>
-                        <span>Built-in Ad & Tracker Blocker</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Cognix Browser is 100% free to download and use without restrictions. We believe privacy
+                            and speed should be a right, not a paid privilege.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Does it block YouTube ads and pop-ups?</h3>
+                        <svg class="toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Our native ad-blocking engine is integrated at the network level. It seamlessly blocks
+                            YouTube video ads, annoying pop-ups, banners, and invisible tracking scripts across all
+                            sites instantly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Does it actually use less RAM?</h3>
+                        <svg class="toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. We use an aggressive tab-sleeping algorithm and stripped-down rendering processes.
+                            Cognix unloads background tabs from memory automatically and blocks heavy ad-scripts, saving
+                            up to 70% of RAM compared to standard browsers.</p>
                     </div>
                 </div>
             </div>
@@ -207,23 +435,63 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-content">
+        <div class="container footer-grid">
             <div class="footer-brand">
-                <span class="logo">Cognix<span class="dot">.</span></span>
-                <p>&copy; 2026 Cognix Browser. All rights reserved.</p>
+                <a href="#" class="brand">
+                    <!-- PASTE YOUR LOGO FILE NAMED "logo.png" IN THE SAME FOLDER AS THIS INDEX.HTML FILE -->
+                    <img src="logo.png" alt="Cognix Logo" width="32" height="32" style="border-radius: 8px;">
+                    <span>Cognix</span>
+                </a>
+                <p>The Browser Built for the Modern Web.</p>
+                <div class="share-buttons">
+                    <!-- PASTE YOUR INSTAGRAM LINK IN THE HREF ATTRIBUTE BELOW -->
+                    <a href="https://www.instagram.com/lol.krytonix/" class="btn-share" title="Follow us on Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <!-- PASTE YOUR DISCORD LINK IN THE HREF ATTRIBUTE BELOW -->
+                    <a href="https://discord.gg/PQZAKSQZQY" class="btn-share" title="Join our Discord">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
+
             <div class="footer-links">
-                <a href="#">Support</a>
-                <a href="#">Github</a>
-                <a href="#">Terms</a>
-                <a href="#">Privacy</a>
+                <h4>Product</h4>
+                <a href="#">Features</a>
+                <a href="#">Extensions</a>
+                <a href="#">Performance</a>
+                <a href="#">Download</a>
+            </div>
+
+
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Get notified about new features.</p>
+                <form class="email-capture" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Cognix Inc. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 
 </html>
-
