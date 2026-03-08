@@ -62,51 +62,54 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            if (href !== '#') {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+            if (href && href.startsWith('#') && href !== '#') {
+                try {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                } catch (err) {
+                    // Ignore invalid selectors
                 }
             }
         });
     });
 
     // Handle Version Selection and Download Links
-    const downloadLinks = {
-        '3.0.1': 'https://github.com/Krytonix/cognix-browser/releases/tag/v3.0.1', // Default Link
-        '2.0.0': 'https://github.com/Krytonix/cognix-browser/releases/tag/v2.0.0', // CHANGE THIS TO YOUR 2.0.0 LINK
-        '1.0.0': 'https://github.com/Krytonix/cognix-browser/releases/tag/v1.0.0'  // CHANGE THIS TO YOUR 1.0.0 LINK
-    };
-
     const versionSelects = document.querySelectorAll('.version-select');
     const downloadButtons = document.querySelectorAll('.dynamic-dl-btn');
 
     versionSelects.forEach(select => {
         select.addEventListener('change', (e) => {
             const selectedVersion = e.target.value;
-            const link = downloadLinks[selectedVersion];
+            // Get the data-url from the option they selected
+            const selectedOption = select.options[select.selectedIndex];
+            const link = selectedOption.getAttribute('data-url');
 
             // Sync all selects if user changes one
             versionSelects.forEach(s => s.value = selectedVersion);
 
             // Update main download buttons
             downloadButtons.forEach(btn => {
-                if (link) {
+                if (link && link !== "YOUR_2.0.0_LINK_HERE" && link !== "YOUR_1.0.0_LINK_HERE") {
                     btn.href = link;
                 }
             });
         });
     });
 
-    // Set initial link based on default selection
+    // Set initial link based on default selection at page load
     if (versionSelects.length > 0 && downloadButtons.length > 0) {
-        const initialVersion = versionSelects[0].value;
-        const initialLink = downloadLinks[initialVersion];
-        if (initialLink) {
-            downloadButtons.forEach(btn => btn.href = initialLink);
+        const initialSelect = versionSelects[0];
+        const initialOption = initialSelect.options[initialSelect.selectedIndex];
+        if (initialOption) {
+            const initialLink = initialOption.getAttribute('data-url');
+            if (initialLink && initialLink !== "YOUR_2.0.0_LINK_HERE" && initialLink !== "YOUR_1.0.0_LINK_HERE") {
+                downloadButtons.forEach(btn => btn.href = initialLink);
+            }
         }
     }
 
