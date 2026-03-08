@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const versionSelects = document.querySelectorAll('.version-select');
-    const downloadButtons = document.querySelectorAll('a.btn-primary.btn-massive');
+    const downloadButtons = document.querySelectorAll('.dynamic-dl-btn');
 
     versionSelects.forEach(select => {
         select.addEventListener('change', (e) => {
