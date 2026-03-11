@@ -914,6 +914,252 @@ a {
     animation: flash 1.5s infinite;
 }
 
+/* ===== Optimizer Section ===== */
+.optimizer-section {
+    background: radial-gradient(circle at center left, rgba(16, 185, 129, 0.08), transparent 50%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.06), transparent 50%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.text-gradient-green {
+    background: linear-gradient(135deg, #34D399, #10B981, #059669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.optimizer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(16, 185, 129, 0.1);
+    color: #34D399;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    padding: 0.5rem 1.25rem;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+    animation: pulse-green 3s infinite;
+}
+
+@keyframes pulse-green {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+    }
+}
+
+.optimizer-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.optimizer-feature-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    padding: 2.25rem;
+    border-radius: 20px;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        background 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.optimizer-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #10B981, #34D399);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.optimizer-feature-card:hover {
+    background: var(--bg-surface-elevated);
+    border-color: rgba(16, 185, 129, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(16, 185, 129, 0.1);
+}
+
+.optimizer-feature-card:hover::before {
+    opacity: 1;
+}
+
+.opt-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    background: rgba(16, 185, 129, 0.1);
+    color: #34D399;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.optimizer-feature-card:hover .opt-icon-wrapper {
+    background: rgba(16, 185, 129, 0.2);
+    transform: scale(1.1);
+}
+
+.optimizer-feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.optimizer-feature-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Optimizer Stats Row */
+.optimizer-stats-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin-top: 1rem;
+}
+
+.opt-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.opt-stat-value {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    color: #34D399;
+    line-height: 1;
+}
+
+.opt-stat-value small {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.opt-stat-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.opt-stat-divider {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, var(--border), transparent);
+}
+
+/* ===== Download Section (Tabbed) ===== */
+.download-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 0.4rem;
+    display: inline-flex;
+}
+
+.dl-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.75rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.dl-tab:hover {
+    color: var(--text-main);
+}
+
+.dl-tab.active {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    box-shadow: 0 4px 20px var(--primary-glow);
+}
+
+.dl-tab.active[data-tab="optimizer"] {
+    background: linear-gradient(135deg, #10B981, #059669);
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+}
+
+.dl-panel {
+    display: none;
+}
+
+.dl-panel.active {
+    display: flex;
+}
+
+.dl-card-title {
+    font-size: 1.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    margin: 0;
+}
+
+.dl-card-desc {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Optimizer Download Card Overrides */
+.optimizer-dl-card::before {
+    background: linear-gradient(90deg, #10B981, #34D399) !important;
+}
+
+.opt-dl-icon {
+    background: rgba(16, 185, 129, 0.1) !important;
+    color: #34D399 !important;
+}
+
+.btn-optimizer {
+    background: linear-gradient(135deg, #10B981, #059669) !important;
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.4) !important;
+}
+
+.btn-optimizer:hover {
+    box-shadow: 0 6px 25px rgba(16, 185, 129, 0.6) !important;
+    transform: translateY(-2px);
+}
+
 /* Download Section */
 .download-section {
     padding: 8rem 0;
@@ -1281,6 +1527,15 @@ a {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .optimizer-stats-row {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .opt-stat-divider:nth-child(4) {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1306,6 +1561,36 @@ a {
     .footer-bottom {
         flex-direction: column;
         gap: 1rem;
+        text-align: center;
+    }
+
+    .optimizer-stats-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .opt-stat-divider {
+        width: 60px;
+        height: 1px;
+        background: linear-gradient(to right, transparent, var(--border), transparent);
+    }
+
+    .dl-tab {
+        padding: 0.7rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .download-card {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conversion-mini-bar {
+        flex-direction: column;
         text-align: center;
     }
 }
