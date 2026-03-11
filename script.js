@@ -113,4 +113,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Download Tab Switching
+    const dlTabs = document.querySelectorAll('.dl-tab');
+    const dlPanels = document.querySelectorAll('.dl-panel');
+
+    dlTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.getAttribute('data-tab');
+
+            // Update active tab
+            dlTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Show/hide panels with animation
+            dlPanels.forEach(panel => {
+                panel.classList.remove('active');
+                panel.style.animation = '';
+            });
+
+            const targetPanel = document.getElementById(`panel-${target}`);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+                targetPanel.style.animation = 'fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+            }
+        });
+    });
+
 });
